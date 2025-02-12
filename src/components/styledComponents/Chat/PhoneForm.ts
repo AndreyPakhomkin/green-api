@@ -16,11 +16,11 @@ export const Image = styled.img`
     width: 320px;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
     font-family: "SF Pro Text";
     font-weight: 100;
     font-size: 36px;
-    margin: 30px 20px;
+    margin: 0;
 `;
 
 export const SubTitle = styled.p`
@@ -44,8 +44,8 @@ export const Btn = styled.div`
 `;
 
 export const Wrap = styled.div`
-    height: 10vw;
-    width: 40%;
+    height: 15%;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

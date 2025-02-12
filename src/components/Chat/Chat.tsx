@@ -1,21 +1,19 @@
 import React from 'react';
-import Welcome from './Welcome';
+import PhoneForm from './PhoneForm';
 import CurrentChat from './CurrentChat';
+import { useAppSelector } from 'store/hooks';
 
-interface ChatProps {
-    activeChat: boolean,
-    userLogin: boolean
-}
+const Chat: React.FC = () => {
 
-const Chat: React.FC<ChatProps> = ({ activeChat, userLogin }) => {
+    const loggedIn = useAppSelector((state) => state.auth.isLoggedIn);
 
-    if (!userLogin) {
+    if (!loggedIn) {
         return (
-            <Welcome />
+            <PhoneForm />
         )
-    }
+    } else return null
 
-    return activeChat ? <CurrentChat activeChat={activeChat} /> : null;
+    // return activeChat ? <CurrentChat activeChat={activeChat} /> : null;
 };
 
 export default Chat;

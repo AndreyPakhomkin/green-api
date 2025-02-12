@@ -42,7 +42,8 @@ export const SearchInput = styled.input`
   outline: none;
   border: none;
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
+  color: #41525d;
 `;
 
 export const List = styled.ul`
